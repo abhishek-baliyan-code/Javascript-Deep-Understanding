@@ -1,0 +1,120 @@
+/* Initial CSS  - Start */
+:root {
+    /* colors */
+    --btn-bg: #d0d8d2;
+    --btn-color: black;
+    --btn-operator-bg: #c98740;
+    --btn-operator-color: white;
+    --output-bar-bg: black;
+    --output-bar-color: white;
+    --border: black;
+    --border-hover: #507089;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Initial CSS  - End */
+
+/* Layout/color/typography - Start */
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    margin: 0;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    width: initial;
+    height: inherit;
+}
+
+p,
+button {
+    font-size: 3rem;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: repeat(4, 7rem);
+    grid-template-rows: repeat(6, 7rem);
+}
+
+.cal-output {
+    display: grid;
+    align-content: center;
+    grid-column: 1 / 5;
+
+    padding-right: 1rem;
+    margin: 0;
+
+    background-color: var(--output-bar-bg);
+    text-align: right;
+}
+
+.cal-output,
+.cal-output::placeholder {
+    color: var(--output-bar-color);
+}
+
+.cal-cancel {
+    grid-column: 1 / 3;
+}
+
+.num-0 {
+    grid-column: 1 / 4;
+}
+
+.cal-cancel,
+.cal-back,
+.cal-num {
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+}
+
+.cal-operator {
+    background-color: var(--btn-operator-bg);
+    color: var(--btn-operator-color);
+}
+
+.cal {
+    border: solid 1px var(--border);
+    border-left: none;
+}
+
+.cal:hover {
+    filter: brightness(111%);
+}
+
+.cal:active {
+    filter: brightness(88%);
+
+    border: solid 2px var(--border-hover);
+    z-index: 1;
+}
+
+.num-0,
+.equal {
+    border-bottom: none;
+}
+
+.cal-operator {
+    border-right: none;
+}
+
+/* Layout - End */
